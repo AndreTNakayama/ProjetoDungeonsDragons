@@ -35,13 +35,18 @@ namespace DungeonsDragonsForms.Classe.Entidades
             int resultado = Convert.ToInt32(DefesaFinal() - forcaInimigo);
             if (resultado >= 0)
             {
-                Console.WriteLine("Bloqueou o ataque!");
+                MessageBox.Show("Bloqueou o ataque!");
             }
             else
             {
                 this.Status.Vida += resultado;
+                MessageBox.Show("O Dragão sofreu " + (-resultado) + " de dano!");
+
                 if (this.Status.Vida <= 0)
-                    Console.WriteLine("O Dragão morreu!");
+                {
+                    MessageBox.Show("O Dragão morreu!");
+                    this.Status.Morte = true;
+                }
             }
         }
     }

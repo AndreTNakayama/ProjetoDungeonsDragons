@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acampamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acampamento.Designer.cs">
+      <DependentUpon>Acampamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Batalha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Acampamento.resx">
+      <DependentUpon>Acampamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Batalha.resx">
       <DependentUpon>Batalha.cs</DependentUpon>
     </EmbeddedResource>

@@ -35,13 +35,17 @@ namespace DungeonsDragonsForms.Classe.Entidades
             int resultado = Convert.ToInt32(DefesaFinal() - forcaInimigo);
             if (resultado >= 0)
             {
-                Console.WriteLine("Bloqueou o ataque!");
+                MessageBox.Show("Bloqueou o ataque!");
             }
             else
             {
                 this.Status.Vida += resultado;
-                if (this.Status.Vida <= 0)
-                    Console.WriteLine("O Goblin morreu!");
+                MessageBox.Show("O goblin sofreu " + (-resultado)+  " de dano!");
+
+                if (this.Status.Vida <= 0) {
+                    MessageBox.Show("O Goblin morreu!");
+                    this.Status.Morte = true;
+                }
             }
         }
     }

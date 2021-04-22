@@ -32,16 +32,21 @@ namespace DungeonsDragonsForms.Classe.Entidades
 
         public override void RecebeAtaque(double forcaInimigo)
         {
-            int resultado = Convert.ToInt32( DefesaFinal() - forcaInimigo);
+            int resultado = Convert.ToInt32(DefesaFinal() - forcaInimigo);
             if (resultado >= 0)
             {
-                Console.WriteLine("Bloqueou o ataque!");
+                MessageBox.Show("Bloqueou o ataque!");
             }
             else
             {
                 this.Status.Vida += resultado;
+                MessageBox.Show("A aranha sofreu " + (-resultado) + " de dano!");
+
                 if (this.Status.Vida <= 0)
-                    Console.WriteLine("A aranha morreu!");
+                {
+                    MessageBox.Show("A aranha morreu!");
+                    this.Status.Morte = true;
+                }
             }
         }
     }

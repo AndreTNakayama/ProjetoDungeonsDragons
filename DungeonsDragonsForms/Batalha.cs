@@ -17,52 +17,72 @@ namespace DungeonsDragonsForms
         public double vidaMaxHeroi{ get; set; }
         public double vidaMaxMonstro { get; set; }
         public Heroi HeroiAtual{ get; set; }
-        public Monstro Monstro { get; set; }
+        public Monstro MonstroAtual { get; set; }
         public frmBatalha(Heroi heroi)
         {
+            this.HeroiAtual = heroi;
             InitializeComponent();
             Random numAleatorio = new Random();
-            int sorteio = numAleatorio.Next(1,3);
+            int sorteio = numAleatorio.Next(1,4);
             MessageBox.Show(sorteio.ToString());
 
             lblStatusVida.Text = "Vida do Herói: " + heroi.Nome;
-            this.vidaMaxHeroi = heroi.Status.Vida;
-            this.HeroiAtual = heroi;
+            vidaMaxHeroi = HeroiAtual.Status.Vida;
             pgbVidaHeroi.Maximum = Convert.ToInt32(vidaMaxHeroi);
             pgbVidaHeroi.Value = Convert.ToInt32(vidaMaxHeroi);
             lblVidaHeroi.Text = heroi.Status.Vida.ToString();
 
             if (sorteio.Equals(1))
             {
-                this.Monstro = new Dragao(1, new Status(15, 20, 10, 20, 150, 0));
+                MonstroAtual = new Dragao(1, new Status(20, 20, 20, 20, 150, 0));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Dragao;
             }
             else if (sorteio.Equals(2))
             {
-                this.Monstro = new Goblin(1, new Status(30, 15, 20, 10, 50, 0));
+                MonstroAtual = new Goblin(1, new Status(40, 15, 20, 10, 50, 0));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Goblin;
             }
             else if (sorteio.Equals(3))
             {
-                this.Monstro = new Aranha(1, new Status(15, 5, 35, 10, 40, 0));
+                MonstroAtual = new Aranha(1, new Status(25, 5, 35, 10, 40, 0));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.aranha;
             }
 
-            vidaMaxMonstro = Monstro.Status.Vida;
-            lblVidaInimigo.Text = "Vida do monstro: " + Monstro.Status.Vida.ToString();
+            vidaMaxMonstro = MonstroAtual.Status.Vida;
+            lblVidaInimigo.Text = "Vida do monstro: " + MonstroAtual.Status.Vida.ToString();
             pgbVidaMonstro.Maximum = Convert.ToInt32(vidaMaxMonstro);
             pgbVidaMonstro.Value = Convert.ToInt32(vidaMaxMonstro);
         }
 
         private void btnAtaque_Click(object sender, EventArgs e)
         {
-            this.Monstro.RecebeAtaque(HeroiAtual.AtaqueFinal());
-            vidaMaxMonstro = Monstro.Status.Vida;
+            if (MonstroAtual.Status.Morte == false && HeroiAtual.Status.Morte == false)
+            {
+                MonstroAtual.RecebeAtaque(HeroiAtual.AtaqueFinal());
+                HeroiAtual.RecebeAtaque(MonstroAtual.AtaqueFinal());
 
-            lblVidaInimigo.Text = "Vida do monstro: 0" ;
-            lblVidaInimigo.Text = "Vida do monstro: " + Monstro.Status.Vida.ToString();
+                lblVidaInimigo.Text = "Vida do monstro: " + MonstroAtual.Status.Vida.ToString();
+                lblVidaHeroi.Text = "Vida do Herói: " + HeroiAtual.Status.Vida.ToString();
 
-            pgbVidaMonstro.Value = Convert.ToInt32(vidaMaxMonstro);
+                pgbVidaMonstro.Value = Convert.ToInt32(MonstroAtual.Status.Vida);
+                pgbVidaHeroi.Value = Convert.ToInt32(HeroiAtual.Status.Vida);
+
+                if (MonstroAtual.Status.Morte == true)
+                {
+                    MessageBox.Show("O monstro morreu!");
+                    frmAcampamento form = new frmAcampamento(vidaMaxHeroi,HeroiAtual);
+                    form.Show();
+                    this.Close();
+                }
+                if (HeroiAtual.Status.Morte == true)
+                {
+                    MessageBox.Show("O herói morreu!");
+                    frmAcampamento form = new frmAcampamento(vidaMaxHeroi,HeroiAtual);
+                    form.Show();
+                    this.Close();
+                }
+            } 
+           
         }
 
         private void lblVidaHeroi_Click(object sender, EventArgs e)

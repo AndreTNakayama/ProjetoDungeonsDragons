@@ -22,3 +22,4 @@ C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\Dungeon
 C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.csproj.CoreCompileInputs.cache
 C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.exe
 C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.pdb
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.frmAcampamento.resources

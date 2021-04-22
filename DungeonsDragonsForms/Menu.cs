@@ -42,7 +42,6 @@ namespace DungeonsDragonsForms
             Heroi heroiEscolhido = listaDePersonagens[cbxPersonagens.SelectedIndex];
             frmBatalha form = new frmBatalha(heroiEscolhido);
             form.ShowDialog();
-
         }
     }
 }
