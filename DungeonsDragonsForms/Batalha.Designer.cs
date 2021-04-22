@@ -36,11 +36,11 @@ namespace DungeonsDragonsForms
             this.lblStatusVida = new System.Windows.Forms.Label();
             this.btnAtaque = new System.Windows.Forms.Button();
             this.lblStatusVidaInimigo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picMonstro = new System.Windows.Forms.PictureBox();
             this.pgbVidaMonstro = new System.Windows.Forms.ProgressBar();
             this.lblVidaInimigo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMonstro)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,11 +60,11 @@ namespace DungeonsDragonsForms
             // lblVidaHeroi
             // 
             this.lblVidaHeroi.AutoSize = true;
-            this.lblVidaHeroi.Location = new System.Drawing.Point(245, 67);
+            this.lblVidaHeroi.Location = new System.Drawing.Point(251, 67);
             this.lblVidaHeroi.Name = "lblVidaHeroi";
-            this.lblVidaHeroi.Size = new System.Drawing.Size(71, 13);
+            this.lblVidaHeroi.Size = new System.Drawing.Size(0, 13);
             this.lblVidaHeroi.TabIndex = 9;
-            this.lblVidaHeroi.Text = "100/50 (67%)";
+            this.lblVidaHeroi.Click += new System.EventHandler(this.lblVidaHeroi_Click);
             // 
             // pgbVidaHeroi
             // 
@@ -111,15 +111,15 @@ namespace DungeonsDragonsForms
             this.lblStatusVidaInimigo.TabIndex = 4;
             this.lblStatusVidaInimigo.Text = "Status de vida do Monstro";
             // 
-            // pictureBox1
+            // picMonstro
             // 
-            this.pictureBox1.Image = global::DungeonsDragonsForms.Properties.Resources.Dragao;
-            this.pictureBox1.Location = new System.Drawing.Point(83, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.picMonstro.Image = global::DungeonsDragonsForms.Properties.Resources.Goblin;
+            this.picMonstro.Location = new System.Drawing.Point(83, 20);
+            this.picMonstro.Name = "picMonstro";
+            this.picMonstro.Size = new System.Drawing.Size(180, 150);
+            this.picMonstro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMonstro.TabIndex = 6;
+            this.picMonstro.TabStop = false;
             // 
             // pgbVidaMonstro
             // 
@@ -131,11 +131,10 @@ namespace DungeonsDragonsForms
             // lblVidaInimigo
             // 
             this.lblVidaInimigo.AutoSize = true;
-            this.lblVidaInimigo.Location = new System.Drawing.Point(460, 62);
+            this.lblVidaInimigo.Location = new System.Drawing.Point(443, 62);
             this.lblVidaInimigo.Name = "lblVidaInimigo";
-            this.lblVidaInimigo.Size = new System.Drawing.Size(71, 13);
+            this.lblVidaInimigo.Size = new System.Drawing.Size(0, 13);
             this.lblVidaInimigo.TabIndex = 10;
-            this.lblVidaInimigo.Text = "30/100 (20%)";
             // 
             // frmBatalha
             // 
@@ -144,14 +143,14 @@ namespace DungeonsDragonsForms
             this.ClientSize = new System.Drawing.Size(576, 372);
             this.Controls.Add(this.lblVidaInimigo);
             this.Controls.Add(this.pgbVidaMonstro);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picMonstro);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblStatusVidaInimigo);
             this.Name = "frmBatalha";
             this.Text = "Batalha";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMonstro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +165,7 @@ namespace DungeonsDragonsForms
         private System.Windows.Forms.Label lblStatusVida;
         private System.Windows.Forms.Button btnAtaque;
         private System.Windows.Forms.Label lblStatusVidaInimigo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picMonstro;
         private System.Windows.Forms.ProgressBar pgbVidaMonstro;
         private System.Windows.Forms.Label lblVidaInimigo;
     }

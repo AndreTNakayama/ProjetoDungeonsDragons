@@ -8,10 +8,9 @@ namespace DungeonsDragonsForms.Classe.Entidades
 {
     abstract public class Heroi
     {
+        public Status Status { get; set; }
         public string Nome { get; set; }
         public int Level { get; set; }
-        public Status Status { get; set; }
-
         public double Ataque { get; set; }
         public int Defesa { get; set; }
 

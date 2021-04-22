@@ -63,9 +63,29 @@ namespace DungeonsDragonsForms.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aranha {
+            get {
+                object obj = ResourceManager.GetObject("aranha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dragao {
             get {
                 object obj = ResourceManager.GetObject("Dragao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Goblin {
+            get {
+                object obj = ResourceManager.GetObject("Goblin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

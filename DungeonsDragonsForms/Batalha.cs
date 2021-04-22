@@ -13,24 +13,61 @@ namespace DungeonsDragonsForms
 {
     public partial class frmBatalha : Form
     {
-        public Monstro Monstro{ get; set; }
-        public double vidaMax{ get; set; }
+
+        public double vidaMaxHeroi{ get; set; }
+        public double vidaMaxMonstro { get; set; }
         public Heroi HeroiAtual{ get; set; }
+        public Monstro Monstro { get; set; }
         public frmBatalha(Heroi heroi)
         {
             InitializeComponent();
+            Random numAleatorio = new Random();
+            int sorteio = numAleatorio.Next(1,3);
+            MessageBox.Show(sorteio.ToString());
 
             lblStatusVida.Text = "Vida do Herói: " + heroi.Nome;
-            this.vidaMax = heroi.Status.Vida;
-
+            this.vidaMaxHeroi = heroi.Status.Vida;
             this.HeroiAtual = heroi;
-            this.Monstro = new Dragao(1, new Status(15, 20, 10, 20, 150, 0));
+            pgbVidaHeroi.Maximum = Convert.ToInt32(vidaMaxHeroi);
+            pgbVidaHeroi.Value = Convert.ToInt32(vidaMaxHeroi);
+            lblVidaHeroi.Text = heroi.Status.Vida.ToString();
+
+            if (sorteio.Equals(1))
+            {
+                this.Monstro = new Dragao(1, new Status(15, 20, 10, 20, 150, 0));
+                picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Dragao;
+            }
+            else if (sorteio.Equals(2))
+            {
+                this.Monstro = new Goblin(1, new Status(30, 15, 20, 10, 50, 0));
+                picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Goblin;
+            }
+            else if (sorteio.Equals(3))
+            {
+                this.Monstro = new Aranha(1, new Status(15, 5, 35, 10, 40, 0));
+                picMonstro.Image = DungeonsDragonsForms.Properties.Resources.aranha;
+            }
+
+            vidaMaxMonstro = Monstro.Status.Vida;
+            lblVidaInimigo.Text = "Vida do monstro: " + Monstro.Status.Vida.ToString();
+            pgbVidaMonstro.Maximum = Convert.ToInt32(vidaMaxMonstro);
+            pgbVidaMonstro.Value = Convert.ToInt32(vidaMaxMonstro);
         }
 
         private void btnAtaque_Click(object sender, EventArgs e)
         {
-            lblVidaInimigo.Text = Monstro.Status.Vida.ToString();
             this.Monstro.RecebeAtaque(HeroiAtual.AtaqueFinal());
+            vidaMaxMonstro = Monstro.Status.Vida;
+
+            lblVidaInimigo.Text = "Vida do monstro: 0" ;
+            lblVidaInimigo.Text = "Vida do monstro: " + Monstro.Status.Vida.ToString();
+
+            pgbVidaMonstro.Value = Convert.ToInt32(vidaMaxMonstro);
+        }
+
+        private void lblVidaHeroi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,7 +10,6 @@ namespace DungeonsDragonsForms.Classe.Entidades
     {
         public int Level { get; set; }
         public Status Status { get; set; }
-
         public double Ataque { get; set; }
         public int Defesa { get; set; }
 

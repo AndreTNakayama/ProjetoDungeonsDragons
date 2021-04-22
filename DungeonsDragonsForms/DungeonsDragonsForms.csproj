@@ -52,8 +52,10 @@
     <Compile Include="Batalha.Designer.cs">
       <DependentUpon>Batalha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classe\Entidades\Aranha.cs" />
     <Compile Include="Classe\Entidades\Arqueiro.cs" />
     <Compile Include="Classe\Entidades\Dragao.cs" />
+    <Compile Include="Classe\Entidades\Goblin.cs" />
     <Compile Include="Classe\Entidades\Guerreiro.cs" />
     <Compile Include="Classe\Entidades\Heroi.cs" />
     <Compile Include="Classe\Entidades\Mago.cs" />
@@ -107,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Dragao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aranha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goblin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

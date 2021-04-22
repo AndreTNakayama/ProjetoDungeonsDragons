@@ -16,17 +16,33 @@ namespace DungeonsDragonsForms.Classe.Entidades
 
         public override double AtaqueFinal()
         {
-            throw new NotImplementedException();
+            Random numAleatorio = new Random();
+            double sorteio = numAleatorio.Next(0, this.Status.Sorte);
+            this.Ataque = ((this.Status.Forca + this.Status.Agilidade) * (1 + (sorteio / 100)));
+            return this.Ataque;
         }
 
         public override double DefesaFinal()
         {
-            throw new NotImplementedException();
+            Random numAleatorio = new Random();
+            int sorteio = numAleatorio.Next(0, this.Status.Sorte);
+            this.Defesa = (this.Status.Defesa + this.Status.Agilidade) * (1 + (sorteio / 100));
+            return this.Defesa;
         }
 
         public override void RecebeAtaque(double forcaInimigo)
         {
-            throw new NotImplementedException();
+            int resultado = Convert.ToInt32(DefesaFinal() - forcaInimigo);
+            if (resultado >= 0)
+            {
+                Console.WriteLine("Bloqueou o ataque!");
+            }
+            else
+            {
+                this.Status.Vida += resultado;
+                if (this.Status.Vida <= 0)
+                    Console.WriteLine("O guerreiro {0} morreu!", this.Nome);
+            }
         }
     }
 }

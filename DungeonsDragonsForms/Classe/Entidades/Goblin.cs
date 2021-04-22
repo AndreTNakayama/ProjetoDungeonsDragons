@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace DungeonsDragonsForms.Classe.Entidades
 {
-    class Mago : Heroi
+    class Goblin : Monstro
     {
-        public Mago(string nome, int level, Status status) : base(nome, level, status)
+        public Goblin(int level, Status status) : base(level, status)
         {
-            MessageBox.Show("Mago cadastrado com sucesso!");
+            MessageBox.Show("Goblin cadastrado com sucesso!");
         }
 
         public override double AtaqueFinal()
@@ -41,7 +41,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
             {
                 this.Status.Vida += resultado;
                 if (this.Status.Vida <= 0)
-                    Console.WriteLine("O guerreiro {0} morreu!", this.Nome);
+                    Console.WriteLine("O Goblin morreu!");
             }
         }
     }

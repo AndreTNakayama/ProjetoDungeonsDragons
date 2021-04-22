@@ -10,3 +10,15 @@ C:\Users\Second\source\repos\DungeonsDragonsForms\DungeonsDragonsForms\bin\Debug
 C:\Users\Second\source\repos\DungeonsDragonsForms\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.exe
 C:\Users\Second\source\repos\DungeonsDragonsForms\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.pdb
 C:\Users\Second\source\repos\DungeonsDragonsForms\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.frmBatalha.resources
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\bin\Debug\DungeonsDragonsForms.exe.config
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\bin\Debug\DungeonsDragonsForms.exe
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\bin\Debug\DungeonsDragonsForms.pdb
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.csprojAssemblyReference.cache
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.frmBatalha.resources
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.frmCriarPersonagem.resources
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.frmMenu.resources
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.Properties.Resources.resources
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.csproj.GenerateResource.cache
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.csproj.CoreCompileInputs.cache
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.exe
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.pdb

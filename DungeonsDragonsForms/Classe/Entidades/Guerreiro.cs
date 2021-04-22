@@ -11,7 +11,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
     {
         public Guerreiro(string nome, int level, Status status) : base(nome, level, status)
         {
-            MessageBox.Show("Guerriro cadastrado com sucesso!");
+            MessageBox.Show("Guerreiro cadastrado com sucesso!");
         }
 
         public override double AtaqueFinal()
@@ -32,7 +32,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
 
         public override void RecebeAtaque(double forcaInimigo)
         {
-            double resultado = DefesaFinal() - forcaInimigo;
+            int resultado = Convert.ToInt32(DefesaFinal() - forcaInimigo);
             if (resultado >= 0)
             {
                 Console.WriteLine("Bloqueou o ataque!");

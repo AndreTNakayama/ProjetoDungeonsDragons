@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace DungeonsDragonsForms.Classe.Entidades
 {
-    class Mago : Heroi
+    class Aranha : Monstro
     {
-        public Mago(string nome, int level, Status status) : base(nome, level, status)
+        public Aranha(int level, Status status) : base(level, status)
         {
-            MessageBox.Show("Mago cadastrado com sucesso!");
+            MessageBox.Show("Aranha cadastrado com sucesso!");
         }
 
         public override double AtaqueFinal()
@@ -32,7 +32,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
 
         public override void RecebeAtaque(double forcaInimigo)
         {
-            int resultado = Convert.ToInt32(DefesaFinal() - forcaInimigo);
+            int resultado = Convert.ToInt32( DefesaFinal() - forcaInimigo);
             if (resultado >= 0)
             {
                 Console.WriteLine("Bloqueou o ataque!");
@@ -41,7 +41,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
             {
                 this.Status.Vida += resultado;
                 if (this.Status.Vida <= 0)
-                    Console.WriteLine("O guerreiro {0} morreu!", this.Nome);
+                    Console.WriteLine("A aranha morreu!");
             }
         }
     }

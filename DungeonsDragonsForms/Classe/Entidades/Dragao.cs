@@ -32,7 +32,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
 
         public override void RecebeAtaque(double forcaInimigo)
         {
-            double resultado = DefesaFinal() - forcaInimigo;
+            int resultado = Convert.ToInt32(DefesaFinal() - forcaInimigo);
             if (resultado >= 0)
             {
                 Console.WriteLine("Bloqueou o ataque!");
