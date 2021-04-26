@@ -25,8 +25,7 @@ namespace DungeonsDragonsForms
             pgbVidaHeroi.Value = Convert.ToInt32(heroiAtual.Status.Vida);
 
             heroiAtual.Status.Vida = Convert.ToInt32(vidaMaxHeroi);
-            heroiAtual.Status.Morte = false;
-
+            this.heroiAtual.Status.Morte = false;
         }
 
         private void btnBatalha_Click(object sender, EventArgs e)
@@ -48,13 +47,19 @@ namespace DungeonsDragonsForms
         {
             if (pgbVidaHeroi.Value != heroiAtual.Status.Vida)
             {
-                pgbVidaHeroi.Value++;
+                pgbVidaHeroi.Value += 2;
             }
             else
             {
                 tmrDescanco.Stop();
                 btnBatalha.Enabled = true;
             }
+        }
+
+        private void btnMercado_Click(object sender, EventArgs e)
+        {
+            frmMercado form = new frmMercado(heroiAtual);
+            form.ShowDialog();
         }
     }
 }

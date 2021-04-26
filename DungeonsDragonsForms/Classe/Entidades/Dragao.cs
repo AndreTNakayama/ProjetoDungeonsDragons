@@ -11,7 +11,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
     {
         public Dragao(int level, Status status) : base(level, status)
         {
-            MessageBox.Show("Dragão cadastrado com sucesso!");
+            MessageBox.Show("Dragão apareceu!");
         }
 
         public override double AtaqueFinal()

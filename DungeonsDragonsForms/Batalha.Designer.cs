@@ -64,7 +64,6 @@ namespace DungeonsDragonsForms
             this.lblVidaHeroi.Name = "lblVidaHeroi";
             this.lblVidaHeroi.Size = new System.Drawing.Size(0, 13);
             this.lblVidaHeroi.TabIndex = 9;
-            this.lblVidaHeroi.Click += new System.EventHandler(this.lblVidaHeroi_Click);
             // 
             // pgbVidaHeroi
             // 
@@ -82,6 +81,7 @@ namespace DungeonsDragonsForms
             this.btnCurar.TabIndex = 3;
             this.btnCurar.Text = "Curar";
             this.btnCurar.UseVisualStyleBackColor = true;
+            this.btnCurar.Click += new System.EventHandler(this.btnCurar_Click);
             // 
             // lblStatusVida
             // 

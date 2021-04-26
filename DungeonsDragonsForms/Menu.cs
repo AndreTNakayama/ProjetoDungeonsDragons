@@ -22,26 +22,25 @@ namespace DungeonsDragonsForms
 
         private void btnCriarPersonagem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCriarPersonagem form = new frmCriarPersonagem();
             form.ShowDialog();
             listaDePersonagens.Add(form.Heroi);
             cbxPersonagens.Items.Add(form.Heroi.Nome);
-            this.Show();
-        }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            if(cbxPersonagens.SelectedIndex >= 0)
+            cbxPersonagens.SelectedIndex = 0;
+            if (cbxPersonagens.SelectedIndex >= 0)
             {
                 btnJogar.Enabled = true;
             }
+            this.Show();
         }
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Heroi heroiEscolhido = listaDePersonagens[cbxPersonagens.SelectedIndex];
             frmBatalha form = new frmBatalha(heroiEscolhido);
-            form.ShowDialog();
+            form.Show();
         }
     }
 }

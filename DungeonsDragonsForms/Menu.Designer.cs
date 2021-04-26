@@ -33,7 +33,6 @@ namespace DungeonsDragonsForms
             this.cbxPersonagens = new System.Windows.Forms.ComboBox();
             this.btnCriarPersonagem = new System.Windows.Forms.Button();
             this.btnJogar = new System.Windows.Forms.Button();
-            this.btnConfirmar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPersonagem
@@ -55,7 +54,7 @@ namespace DungeonsDragonsForms
             // 
             // btnCriarPersonagem
             // 
-            this.btnCriarPersonagem.Location = new System.Drawing.Point(16, 117);
+            this.btnCriarPersonagem.Location = new System.Drawing.Point(16, 56);
             this.btnCriarPersonagem.Name = "btnCriarPersonagem";
             this.btnCriarPersonagem.Size = new System.Drawing.Size(85, 72);
             this.btnCriarPersonagem.TabIndex = 2;
@@ -66,7 +65,7 @@ namespace DungeonsDragonsForms
             // btnJogar
             // 
             this.btnJogar.Enabled = false;
-            this.btnJogar.Location = new System.Drawing.Point(107, 117);
+            this.btnJogar.Location = new System.Drawing.Point(107, 56);
             this.btnJogar.Name = "btnJogar";
             this.btnJogar.Size = new System.Drawing.Size(85, 72);
             this.btnJogar.TabIndex = 3;
@@ -74,22 +73,11 @@ namespace DungeonsDragonsForms
             this.btnJogar.UseVisualStyleBackColor = true;
             this.btnJogar.Click += new System.EventHandler(this.btnJogar_Click);
             // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.Location = new System.Drawing.Point(16, 57);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(176, 23);
-            this.btnConfirmar.TabIndex = 4;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(214, 201);
-            this.Controls.Add(this.btnConfirmar);
+            this.ClientSize = new System.Drawing.Size(214, 144);
             this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.btnCriarPersonagem);
             this.Controls.Add(this.cbxPersonagens);
@@ -107,7 +95,6 @@ namespace DungeonsDragonsForms
         private System.Windows.Forms.ComboBox cbxPersonagens;
         private System.Windows.Forms.Button btnCriarPersonagem;
         private System.Windows.Forms.Button btnJogar;
-        private System.Windows.Forms.Button btnConfirmar;
     }
 }
 

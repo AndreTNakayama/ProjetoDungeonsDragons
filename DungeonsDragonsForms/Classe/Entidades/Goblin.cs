@@ -11,7 +11,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
     {
         public Goblin(int level, Status status) : base(level, status)
         {
-            MessageBox.Show("Goblin cadastrado com sucesso!");
+            MessageBox.Show("Goblin apareceu!");
         }
 
         public override double AtaqueFinal()

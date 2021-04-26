@@ -34,20 +34,20 @@ namespace DungeonsDragonsForms
             this.cbxClasse = new System.Windows.Forms.ComboBox();
             this.lblClasse = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMANA = new System.Windows.Forms.TextBox();
+            this.txtVIT = new System.Windows.Forms.TextBox();
+            this.txtSOR = new System.Windows.Forms.TextBox();
+            this.lblMANA = new System.Windows.Forms.Label();
+            this.lblVIT = new System.Windows.Forms.Label();
+            this.lblSOR = new System.Windows.Forms.Label();
+            this.txtAGI = new System.Windows.Forms.TextBox();
+            this.txtDEF = new System.Windows.Forms.TextBox();
+            this.lblDEF = new System.Windows.Forms.Label();
             this.lblAGI = new System.Windows.Forms.Label();
             this.lblFOR = new System.Windows.Forms.Label();
             this.txtFOR = new System.Windows.Forms.TextBox();
-            this.lblDEF = new System.Windows.Forms.Label();
-            this.txtDEF = new System.Windows.Forms.TextBox();
-            this.txtAGI = new System.Windows.Forms.TextBox();
-            this.lblSOR = new System.Windows.Forms.Label();
-            this.lblVIT = new System.Windows.Forms.Label();
-            this.lblMANA = new System.Windows.Forms.Label();
-            this.txtSOR = new System.Windows.Forms.TextBox();
-            this.txtVIT = new System.Windows.Forms.TextBox();
-            this.txtMANA = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,15 +105,95 @@ namespace DungeonsDragonsForms
             this.groupBox1.Controls.Add(this.txtFOR);
             this.groupBox1.Location = new System.Drawing.Point(16, 80);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 165);
+            this.groupBox1.Size = new System.Drawing.Size(244, 204);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "  Atributos  ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Distribua 300 Pontos";
+            // 
+            // txtMANA
+            // 
+            this.txtMANA.Location = new System.Drawing.Point(169, 64);
+            this.txtMANA.Name = "txtMANA";
+            this.txtMANA.Size = new System.Drawing.Size(53, 20);
+            this.txtMANA.TabIndex = 23;
+            // 
+            // txtVIT
+            // 
+            this.txtVIT.Location = new System.Drawing.Point(59, 168);
+            this.txtVIT.Name = "txtVIT";
+            this.txtVIT.Size = new System.Drawing.Size(53, 20);
+            this.txtVIT.TabIndex = 20;
+            // 
+            // txtSOR
+            // 
+            this.txtSOR.Location = new System.Drawing.Point(59, 142);
+            this.txtSOR.Name = "txtSOR";
+            this.txtSOR.Size = new System.Drawing.Size(53, 20);
+            this.txtSOR.TabIndex = 17;
+            // 
+            // lblMANA
+            // 
+            this.lblMANA.AutoSize = true;
+            this.lblMANA.Location = new System.Drawing.Point(125, 67);
+            this.lblMANA.Name = "lblMANA";
+            this.lblMANA.Size = new System.Drawing.Size(38, 13);
+            this.lblMANA.TabIndex = 14;
+            this.lblMANA.Text = "MANA";
+            // 
+            // lblVIT
+            // 
+            this.lblVIT.AutoSize = true;
+            this.lblVIT.Location = new System.Drawing.Point(24, 171);
+            this.lblVIT.Name = "lblVIT";
+            this.lblVIT.Size = new System.Drawing.Size(24, 13);
+            this.lblVIT.TabIndex = 13;
+            this.lblVIT.Text = "VIT";
+            // 
+            // lblSOR
+            // 
+            this.lblSOR.AutoSize = true;
+            this.lblSOR.Location = new System.Drawing.Point(22, 145);
+            this.lblSOR.Name = "lblSOR";
+            this.lblSOR.Size = new System.Drawing.Size(30, 13);
+            this.lblSOR.TabIndex = 12;
+            this.lblSOR.Text = "SOR";
+            // 
+            // txtAGI
+            // 
+            this.txtAGI.Location = new System.Drawing.Point(59, 116);
+            this.txtAGI.Name = "txtAGI";
+            this.txtAGI.Size = new System.Drawing.Size(53, 20);
+            this.txtAGI.TabIndex = 11;
+            // 
+            // txtDEF
+            // 
+            this.txtDEF.Location = new System.Drawing.Point(59, 90);
+            this.txtDEF.Name = "txtDEF";
+            this.txtDEF.Size = new System.Drawing.Size(53, 20);
+            this.txtDEF.TabIndex = 8;
+            // 
+            // lblDEF
+            // 
+            this.lblDEF.AutoSize = true;
+            this.lblDEF.Location = new System.Drawing.Point(24, 93);
+            this.lblDEF.Name = "lblDEF";
+            this.lblDEF.Size = new System.Drawing.Size(28, 13);
+            this.lblDEF.TabIndex = 5;
+            this.lblDEF.Text = "DEF";
+            // 
             // lblAGI
             // 
             this.lblAGI.AutoSize = true;
-            this.lblAGI.Location = new System.Drawing.Point(15, 85);
+            this.lblAGI.Location = new System.Drawing.Point(24, 119);
             this.lblAGI.Name = "lblAGI";
             this.lblAGI.Size = new System.Drawing.Size(25, 13);
             this.lblAGI.TabIndex = 4;
@@ -122,7 +202,7 @@ namespace DungeonsDragonsForms
             // lblFOR
             // 
             this.lblFOR.AutoSize = true;
-            this.lblFOR.Location = new System.Drawing.Point(15, 33);
+            this.lblFOR.Location = new System.Drawing.Point(24, 67);
             this.lblFOR.Name = "lblFOR";
             this.lblFOR.Size = new System.Drawing.Size(29, 13);
             this.lblFOR.TabIndex = 3;
@@ -130,85 +210,14 @@ namespace DungeonsDragonsForms
             // 
             // txtFOR
             // 
-            this.txtFOR.Location = new System.Drawing.Point(50, 30);
+            this.txtFOR.Location = new System.Drawing.Point(59, 64);
             this.txtFOR.Name = "txtFOR";
             this.txtFOR.Size = new System.Drawing.Size(53, 20);
             this.txtFOR.TabIndex = 2;
             // 
-            // lblDEF
-            // 
-            this.lblDEF.AutoSize = true;
-            this.lblDEF.Location = new System.Drawing.Point(15, 59);
-            this.lblDEF.Name = "lblDEF";
-            this.lblDEF.Size = new System.Drawing.Size(28, 13);
-            this.lblDEF.TabIndex = 5;
-            this.lblDEF.Text = "DEF";
-            // 
-            // txtDEF
-            // 
-            this.txtDEF.Location = new System.Drawing.Point(50, 56);
-            this.txtDEF.Name = "txtDEF";
-            this.txtDEF.Size = new System.Drawing.Size(53, 20);
-            this.txtDEF.TabIndex = 8;
-            // 
-            // txtAGI
-            // 
-            this.txtAGI.Location = new System.Drawing.Point(50, 82);
-            this.txtAGI.Name = "txtAGI";
-            this.txtAGI.Size = new System.Drawing.Size(53, 20);
-            this.txtAGI.TabIndex = 11;
-            // 
-            // lblSOR
-            // 
-            this.lblSOR.AutoSize = true;
-            this.lblSOR.Location = new System.Drawing.Point(13, 111);
-            this.lblSOR.Name = "lblSOR";
-            this.lblSOR.Size = new System.Drawing.Size(30, 13);
-            this.lblSOR.TabIndex = 12;
-            this.lblSOR.Text = "SOR";
-            // 
-            // lblVIT
-            // 
-            this.lblVIT.AutoSize = true;
-            this.lblVIT.Location = new System.Drawing.Point(15, 137);
-            this.lblVIT.Name = "lblVIT";
-            this.lblVIT.Size = new System.Drawing.Size(24, 13);
-            this.lblVIT.TabIndex = 13;
-            this.lblVIT.Text = "VIT";
-            // 
-            // lblMANA
-            // 
-            this.lblMANA.AutoSize = true;
-            this.lblMANA.Location = new System.Drawing.Point(125, 33);
-            this.lblMANA.Name = "lblMANA";
-            this.lblMANA.Size = new System.Drawing.Size(38, 13);
-            this.lblMANA.TabIndex = 14;
-            this.lblMANA.Text = "MANA";
-            // 
-            // txtSOR
-            // 
-            this.txtSOR.Location = new System.Drawing.Point(50, 108);
-            this.txtSOR.Name = "txtSOR";
-            this.txtSOR.Size = new System.Drawing.Size(53, 20);
-            this.txtSOR.TabIndex = 17;
-            // 
-            // txtVIT
-            // 
-            this.txtVIT.Location = new System.Drawing.Point(50, 134);
-            this.txtVIT.Name = "txtVIT";
-            this.txtVIT.Size = new System.Drawing.Size(53, 20);
-            this.txtVIT.TabIndex = 20;
-            // 
-            // txtMANA
-            // 
-            this.txtMANA.Location = new System.Drawing.Point(169, 30);
-            this.txtMANA.Name = "txtMANA";
-            this.txtMANA.Size = new System.Drawing.Size(53, 20);
-            this.txtMANA.TabIndex = 23;
-            // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(185, 251);
+            this.btnSalvar.Location = new System.Drawing.Point(185, 290);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 5;
@@ -216,20 +225,11 @@ namespace DungeonsDragonsForms
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Qnt de Pontos: 300";
-            // 
             // frmCriarPersonagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 284);
+            this.ClientSize = new System.Drawing.Size(276, 325);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblClasse);

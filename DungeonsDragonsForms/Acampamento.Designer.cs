@@ -80,6 +80,7 @@
             this.btnMercado.TabIndex = 3;
             this.btnMercado.Text = "Ir para o Mercado";
             this.btnMercado.UseVisualStyleBackColor = true;
+            this.btnMercado.Click += new System.EventHandler(this.btnMercado_Click);
             // 
             // pgbVidaHeroi
             // 
@@ -106,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 317);
+            this.ClientSize = new System.Drawing.Size(538, 182);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pgbVidaHeroi);
             this.Controls.Add(this.btnMercado);

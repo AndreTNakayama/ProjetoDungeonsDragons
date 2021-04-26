@@ -84,7 +84,8 @@ namespace DungeonsDragonsForms.Classe.Entidades
                 {
                     this._vida = value;
                 }
-                else {
+                else
+                {
                     this._vida = 0;
                 }
             }
@@ -104,7 +105,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
             }
         }
 
-        public bool Morte 
+        public bool Morte
         {
             get
             {
@@ -112,15 +113,12 @@ namespace DungeonsDragonsForms.Classe.Entidades
             }
             set
             {
-                if (Vida == 0)
-                {
-                    this._morto = true;
-                }
+                this._morto = value;
             }
         }
 
 
-        public Status(int forca, int defesa, int agilidade, int sorte, int vida, int mana)
+        public Status(int forca, int defesa, int agilidade, int sorte, int vida, int mana, bool morte)
         {
             Forca = forca;
             Defesa = defesa;
@@ -128,7 +126,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
             Sorte = sorte;
             Vida = vida;
             Mana = mana;
-            Morte = false;
+            Morte = morte;
         }
     }
 }

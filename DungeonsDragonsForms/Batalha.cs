@@ -14,17 +14,16 @@ namespace DungeonsDragonsForms
     public partial class frmBatalha : Form
     {
 
-        public double vidaMaxHeroi{ get; set; }
+        public double vidaMaxHeroi { get; set; }
         public double vidaMaxMonstro { get; set; }
-        public Heroi HeroiAtual{ get; set; }
+        public Heroi HeroiAtual { get; set; }
         public Monstro MonstroAtual { get; set; }
         public frmBatalha(Heroi heroi)
         {
             this.HeroiAtual = heroi;
             InitializeComponent();
             Random numAleatorio = new Random();
-            int sorteio = numAleatorio.Next(1,4);
-            MessageBox.Show(sorteio.ToString());
+            int sorteio = numAleatorio.Next(1, 4);
 
             lblStatusVida.Text = "Vida do Herói: " + heroi.Nome;
             vidaMaxHeroi = HeroiAtual.Status.Vida;
@@ -32,19 +31,27 @@ namespace DungeonsDragonsForms
             pgbVidaHeroi.Value = Convert.ToInt32(vidaMaxHeroi);
             lblVidaHeroi.Text = heroi.Status.Vida.ToString();
 
+            if (this.HeroiAtual.Classe == "Mago"){
+                btnCurar.Enabled = true;
+            }
+            else
+            {
+                btnCurar.Enabled = false;
+            }
+
             if (sorteio.Equals(1))
             {
-                MonstroAtual = new Dragao(1, new Status(20, 20, 20, 20, 150, 0));
+                MonstroAtual = new Dragao(1, new Status(50, 30, 25, 10, 200, 0, false));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Dragao;
             }
             else if (sorteio.Equals(2))
             {
-                MonstroAtual = new Goblin(1, new Status(40, 15, 20, 10, 50, 0));
+                MonstroAtual = new Goblin(1, new Status(30, 15, 20, 10, 100, 0, false));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Goblin;
             }
             else if (sorteio.Equals(3))
             {
-                MonstroAtual = new Aranha(1, new Status(25, 5, 35, 10, 40, 0));
+                MonstroAtual = new Aranha(1, new Status(20, 5, 35, 10, 60, 0, false));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.aranha;
             }
 
@@ -69,25 +76,27 @@ namespace DungeonsDragonsForms
 
                 if (MonstroAtual.Status.Morte == true)
                 {
+                    Random numAleatorio = new Random();
+                    int sorteio = numAleatorio.Next(20, 120);
+
                     MessageBox.Show("O monstro morreu!");
-                    frmAcampamento form = new frmAcampamento(vidaMaxHeroi,HeroiAtual);
+                    this.HeroiAtual.Carteira += sorteio;
+                    frmAcampamento form = new frmAcampamento(vidaMaxHeroi, HeroiAtual);
                     form.Show();
                     this.Close();
                 }
                 if (HeroiAtual.Status.Morte == true)
                 {
-                    MessageBox.Show("O herói morreu!");
-                    frmAcampamento form = new frmAcampamento(vidaMaxHeroi,HeroiAtual);
+                    frmAcampamento form = new frmAcampamento(vidaMaxHeroi, HeroiAtual);
                     form.Show();
                     this.Close();
                 }
-            } 
-           
+            }
         }
 
-        private void lblVidaHeroi_Click(object sender, EventArgs e)
+        private void btnCurar_Click(object sender, EventArgs e)
         {
-
+            this.HeroiAtual.Status.Vida = Convert.ToInt32(vidaMaxHeroi * 0.2);
         }
     }
 }

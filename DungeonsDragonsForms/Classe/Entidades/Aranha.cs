@@ -11,7 +11,7 @@ namespace DungeonsDragonsForms.Classe.Entidades
     {
         public Aranha(int level, Status status) : base(level, status)
         {
-            MessageBox.Show("Aranha cadastrado com sucesso!");
+            MessageBox.Show("Aranha apareceu!");
         }
 
         public override double AtaqueFinal()
