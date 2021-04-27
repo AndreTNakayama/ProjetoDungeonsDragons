@@ -37,8 +37,14 @@ namespace DungeonsDragonsForms.Classe.Inventário
         {
             int buff = 0;
             buff += Espada * 10;
-            buff += Arco * 10;
-            buff += Cajado * 10;
+            buff += Arco * 3;
+            buff += Cajado * 2;
+            return buff;
+        }
+        public int BuffAgi()
+        {
+            int buff = 0;
+            buff += Arco * 5;
             return buff;
         }
 

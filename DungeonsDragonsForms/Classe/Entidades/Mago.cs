@@ -20,15 +20,15 @@ namespace DungeonsDragonsForms.Classe.Entidades
         {
             Random numAleatorio = new Random();
             double sorteio = numAleatorio.Next(0, this.Status.Sorte);
-            this.Ataque = ((this.Status.Forca + this.Inventario.BuffForca()) + this.Status.Agilidade) * (1 + (sorteio / 100));
+            this.Ataque = ((this.Status.Forca + this.Inventario.BuffForca()) + (this.Status.Agilidade + this.Inventario.BuffAgi())) * (1 + (sorteio / 100));
             return this.Ataque;
         }
 
         public override double DefesaFinal()
         {
             Random numAleatorio = new Random();
-            int sorteio = numAleatorio.Next(0, this.Status.Sorte);
-            this.Defesa = ((this.Status.Defesa + Inventario.BuffDef()) + this.Status.Agilidade) * (1 + (sorteio / 100));
+            int sorteio = numAleatorio.Next(0, this.Status.Sorte); 
+            this.Defesa = ((this.Status.Defesa + Inventario.BuffDef()) + (this.Status.Agilidade + this.Inventario.BuffAgi())) * (1 + (sorteio / 100));
             return this.Defesa;
         }
 

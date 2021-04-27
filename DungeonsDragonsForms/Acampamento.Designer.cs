@@ -73,6 +73,7 @@
             // 
             // btnMercado
             // 
+            this.btnMercado.Enabled = false;
             this.btnMercado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMercado.Location = new System.Drawing.Point(369, 100);
             this.btnMercado.Name = "btnMercado";

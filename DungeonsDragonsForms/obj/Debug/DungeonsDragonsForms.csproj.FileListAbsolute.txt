@@ -37,3 +37,4 @@ C:\Users\Second\Desktop\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsFor
 C:\Users\Second\Desktop\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.exe
 C:\Users\Second\Desktop\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.pdb
 C:\Users\Second\Desktop\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.frmMercado.resources
+C:\Users\eduar\OneDrive\Área de Trabalho\Faculdade-master\3ºSem\AppD-D\DungeonsDragonsForms\obj\Debug\DungeonsDragonsForms.frmMercado.resources

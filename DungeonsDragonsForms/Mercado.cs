@@ -59,8 +59,8 @@ namespace DungeonsDragonsForms
                 lblItem1.Text = "Arco(65 moedas) +5 de agilidade e +3 de força";
                 if (this.HeroiAtual.Carteira >= 65)
                 {
-                    picItem2.Enabled = true;
-                    lblItem2.Enabled = true;
+                    picItem1.Enabled = true;
+                    lblItem1.Enabled = true;
                 }
                 else
                 {
@@ -77,8 +77,8 @@ namespace DungeonsDragonsForms
                 lblItem1.Text = "Cajado(60 moedas) +2 de força e +50 de vida";
                 if (this.HeroiAtual.Carteira >= 60)
                 {
-                    picItem2.Enabled = true;
-                    lblItem2.Enabled = true;
+                    picItem1.Enabled = true;
+                    lblItem1.Enabled = true;
                 }
                 else
                 {
@@ -140,6 +140,7 @@ namespace DungeonsDragonsForms
             {
                 MessageBox.Show("Você comprou um Cajado");
                 this.HeroiAtual.Inventario.ComprarCajado();
+                this.HeroiAtual.Status.Vida += 50;
                 this.HeroiAtual.Carteira -= 60;
 
                 if (this.HeroiAtual.Carteira >= 60)

@@ -41,17 +41,17 @@ namespace DungeonsDragonsForms
 
             if (sorteio.Equals(1))
             {
-                MonstroAtual = new Dragao(1, new Status(50, 30, 25, 10, 200, 0, false));
+                MonstroAtual = new Dragao(1, new Status(80, 30, 30, 10, 200, 0, false));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Dragao;
             }
             else if (sorteio.Equals(2))
             {
-                MonstroAtual = new Goblin(1, new Status(30, 15, 20, 10, 100, 0, false));
+                MonstroAtual = new Goblin(1, new Status(55, 15, 40, 10, 100, 0, false));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.Goblin;
             }
             else if (sorteio.Equals(3))
             {
-                MonstroAtual = new Aranha(1, new Status(20, 5, 35, 10, 60, 0, false));
+                MonstroAtual = new Aranha(1, new Status(65, 5, 35, 10, 60, 0, false));
                 picMonstro.Image = DungeonsDragonsForms.Properties.Resources.aranha;
             }
 
@@ -96,7 +96,18 @@ namespace DungeonsDragonsForms
 
         private void btnCurar_Click(object sender, EventArgs e)
         {
-            this.HeroiAtual.Status.Vida = Convert.ToInt32(vidaMaxHeroi * 0.2);
+            double cura = vidaMaxHeroi * 0.2;
+
+            if ((HeroiAtual.Status.Vida + cura) < vidaMaxHeroi)
+            {
+                this.HeroiAtual.Status.Vida += Convert.ToInt32(cura);
+            }
+            else {
+                this.HeroiAtual.Status.Vida = Convert.ToInt32(vidaMaxHeroi);
+            }
+
+            lblVidaHeroi.Text = "Vida do Herói: " + HeroiAtual.Status.Vida.ToString();
+            pgbVidaHeroi.Value = Convert.ToInt32(HeroiAtual.Status.Vida);
         }
     }
 }

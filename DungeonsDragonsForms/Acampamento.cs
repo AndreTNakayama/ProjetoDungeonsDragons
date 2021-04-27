@@ -53,6 +53,7 @@ namespace DungeonsDragonsForms
             {
                 tmrDescanco.Stop();
                 btnBatalha.Enabled = true;
+                btnMercado.Enabled = true;
             }
         }
 
