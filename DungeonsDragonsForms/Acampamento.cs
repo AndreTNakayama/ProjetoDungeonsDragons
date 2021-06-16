@@ -47,7 +47,7 @@ namespace DungeonsDragonsForms
         {
             if (pgbVidaHeroi.Value != heroiAtual.Status.Vida)
             {
-                pgbVidaHeroi.Value += 2;
+                pgbVidaHeroi.Value++;
             }
             else
             {
